@@ -31,14 +31,14 @@ public class SkillCircleController {
     }
 
     @PutMapping("/skill/edit/{id}")
-    public void editCircle(@PathVariable int circleId,
+    public void editCircle(@PathVariable int id,
             @RequestBody SkillCircle newCircle) {
-        SkillCircle toEdit = circleService.findCircle(circleId);
+        SkillCircle toEdit = circleService.findCircle(id);
         circleService.editCircle(toEdit, newCircle.getPercent(), newCircle.getSkill());
     }
     
     @DeleteMapping("/skill/delete/{id}")
-    public void deleteCircle(@PathVariable int circleId){
-        circleService.deleteCircle(circleId);
+    public void deleteCircle(@PathVariable int id){
+        circleService.deleteCircle(id);
     }
 }
