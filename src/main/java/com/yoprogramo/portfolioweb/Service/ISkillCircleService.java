@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface ISkillCircleService {
     
-    public void createCircle(SkillCircle circle);
+    public void saveCircle(SkillCircle circle);
     
     public void deleteCircle(int circleId);
     

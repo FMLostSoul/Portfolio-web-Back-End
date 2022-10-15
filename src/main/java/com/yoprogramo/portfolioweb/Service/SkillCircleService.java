@@ -13,7 +13,7 @@ public class SkillCircleService implements ISkillCircleService {
     SkillCircleRepository skillCRepository;
     
     @Override
-    public void createCircle(SkillCircle circle) {
+    public void saveCircle(SkillCircle circle) {
         skillCRepository.save(circle);
     }
 

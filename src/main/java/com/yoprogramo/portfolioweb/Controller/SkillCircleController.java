@@ -27,7 +27,7 @@ public class SkillCircleController {
 
     @PostMapping("/skill/create")
     public void createCircle(@RequestBody SkillCircle newCircle) {
-        circleService.createCircle(newCircle);
+        circleService.saveCircle(newCircle);
     }
 
     @PutMapping("/skill/edit/{id}")
@@ -35,6 +35,7 @@ public class SkillCircleController {
             @RequestBody SkillCircle newCircle) {
         SkillCircle toEdit = circleService.findCircle(id);
         circleService.editCircle(toEdit, newCircle.getPercent(), newCircle.getSkill());
+        circleService.saveCircle(toEdit);
     }
     
     @DeleteMapping("/skill/delete/{id}")
