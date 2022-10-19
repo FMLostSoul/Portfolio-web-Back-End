@@ -28,7 +28,7 @@ public class FirstTimeExecute implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-     
+     /**
         Role rolAdmin = new Role(RoleName.ROLE_ADMIN);
         Role rolUser = new Role(RoleName.ROLE_USER); // No se usa por ahora.
         roleService.save(rolAdmin);
@@ -46,7 +46,7 @@ public class FirstTimeExecute implements CommandLineRunner {
         UserProfile firstUser = new UserProfile("userName","careerInfo","email", urls);
         userService.saveInfo(firstUser);
         
-    
+    **/
     }
 }
 
