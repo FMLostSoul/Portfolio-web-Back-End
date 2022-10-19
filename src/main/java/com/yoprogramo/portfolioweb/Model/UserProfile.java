@@ -26,4 +26,16 @@ public class UserProfile {
     @JoinTable(name = "user_profile_URLS", joinColumns = @JoinColumn(name = "user_profile_id"),
             inverseJoinColumns = @JoinColumn(name = "url_id"))
     private List<Url> urls;
+
+    public UserProfile(String userName, String careerInfo, String email, List<Url> urls) {
+        this.userName = userName;
+        this.careerInfo = careerInfo;
+        this.email = email;
+        this.urls = urls;
+    }
+
+    public UserProfile() {
+    }
+    
+    
 }
